@@ -1,0 +1,10 @@
+<?php if ($block->getData('title')): ?>
+    <h3 class="page-list-title">
+        <?php echo $block->getData('title'); ?>
+    </h3>
+<?php endif; ?>
+<ul>
+<?php foreach($block->getPages() as $page): ?>
+    <li><a href="<?= $block->getUrl($page->getData('identifier')) ?>"> <?= $page->getData('title') ?></a></li>
+<?php endforeach; ?>
+</ul>
